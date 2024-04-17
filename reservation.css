@@ -1,0 +1,337 @@
+/* Réinitialisation des styles */
+.reserve-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reserve-button:hover {
+    background-color: #45a049;
+  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: rgb(88, 88, 15);
+    color: #fff;
+    padding: 16px 16px 12px 10px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    margin-left: 20px; /* Marge à gauche pour le logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+main {
+    padding: 50px 0;
+}
+
+.reserve-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.images {
+    width: 30%; /* Réduire la largeur du slider */
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form {
+    width: 55%;
+}
+
+.reserve-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reserve-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.reserve-form p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.labels {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.left-label,
+.right-label {
+    flex-grow: 1;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.reserve-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.images {
+    width: 40%;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    width: 55%;
+}
+
+.reserve-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.reserve-form p {
+    margin-bottom: 20px;
+}
+
+.labels {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.left-label,
+.right-label {
+    flex-grow: 1;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/************************footer****************/
+.footer-custom {
+    background-color: rgb(88, 88, 15); /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte */
+    padding: 30px 0; /* Espacement intérieur du footer */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police de caractère */
+    border-top: 3px solid #ffd700; /* Bordure dorée en haut */
+}
+
+.footer-custom .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Largeur maximale du footer */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+.footer-custom .box {
+    flex: 1;
+    padding: 0 20px; /* Espacement intérieur de chaque boîte */
+    max-width: 350px; /* Largeur maximale de chaque boîte */
+}
+
+.footer-custom .box h3 {
+    margin-top: 0; /* Supprimer la marge supérieure du titre */
+    font-size: 24px; /* Taille de police du titre */
+    color: #080808; /* Couleur dorée */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    margin-bottom: 15px; /* Espacement en bas du titre */
+}
+
+.footer-custom .box ul {
+    list-style-type: none; /* Supprimer les puces de la liste */
+    padding: 0;
+}
+
+.footer-custom .box ul li {
+    margin-bottom: 10px;
+    font-size: 16px; /* Taille de police des éléments */
+}
+
+.footer-custom .contact-box {
+    text-align: center; /* Centrer le contenu de la boîte de contact */
+    background-color: #c5ca89; /* Couleur de fond de la boîte de contact */
+    padding: 20px; /* Espacement intérieur de la boîte de contact */
+    border-radius: 10px; /* Coins arrondis */
+    margin-top: 20px; /* Espacement entre la boîte de contact et les autres boîtes */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Ombre légère noire */
+}
+
+.footer-custom .contact-box ul li {
+    margin-bottom: 8px;
+    font-size: 16px; /* Taille de police des éléments de contact */
+}
+
+.footer-custom .contact-box h3 {
+    font-size: 24px; /* Taille de police du titre de la boîte de contact */
+    color: #f6f6dd; /* Couleur dorée */
+}
+
+/* Réponse du responsive */
+@media only screen and (max-width: 460px) {
+    .container {
+        width: 90%;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .reserve-form-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .images {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .reserve-form {
+        padding: 20px;
+    }
+
+    .reserve-form h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .reserve-form p {
+        margin-bottom: 15px;
+    }
+
+    .labels {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+}

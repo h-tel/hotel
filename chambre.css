@@ -1,0 +1,819 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+body a{
+  text-decoration: none;
+  color: white;
+}
+.button a {
+  color: white;
+}
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Styles pour la navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 0;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.navbar.fixed {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond de navigation transparent */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffd700; /* Couleur dorée au survol */
+}
+
+/* Styles pour le menu burger */
+.burger {
+  display: none; /* Masquer le menu burger par défaut */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Rotation des lignes pour le menu burger */
+.burger.open .line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open .line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Media query pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+  .menu {
+      display: none; /* Masquer le menu principal sur les appareils mobiles */
+  }
+
+  .burger {
+      display: flex; /* Afficher le menu burger sur les appareils mobiles */
+  }
+
+  .navbar.fixed {
+      background-color: rgba(0, 0, 0, 0.9); /* Fond de navigation transparent */
+  }
+
+  .container {
+      padding: 0 10px;
+  }
+
+  .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding-top: 80px; /* Espacement pour éviter que le menu se superpose au haut de la page */
+      z-index: 998; /* Assure que le menu burger s'affiche au-dessus du carrousel */
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+  }
+
+  .menu.open {
+      transform: translateY(0);
+  }
+
+  .menu li {
+      margin: 15px 0;
+  }
+
+  .menu li a {
+      color: #fff;
+      font-size: 18px;
+  }
+}
+
+/********************************barre search*******
+.recherche{
+    display: flex;
+    justify-content: center;
+    font-family: helvetica;
+    
+}
+.glass{
+    position: absolute;
+    left: 72%;
+}
+
+.recherche input[type="text"] {
+    width: 50%; /* Utilisez toute la largeur disponible */
+    /*padding: 10px; /* Ajoutez un espace intérieur pour un aspect agréable */
+   /*  border: 20% solid #ccc; Ajoutez une bordure */
+/***} *********/
+
+/*****************trait******
+.trait{
+    width: 60%;
+    color: black ;
+    border:solid;
+}******/
+
+
+/************************défilé les images***********/
+#carrousel{
+    width:99,2%;
+    height:650px;
+    border:solid 4px rgb(129, 129, 34);
+    box-shadow:0 0 14px rgba(176, 155, 155, 0.3);
+    position:relative;
+    overflow: hidden;
+    
+}
+
+#container{
+    width:99,2%;
+    height:650px;
+    
+}
+
+.photo{
+    width:25%;
+    height:650px;
+    margin: 0;
+    display: inline-block;
+    background-size: cover;
+    
+}
+
+.button{
+    position:absolute;
+    width:90px;
+    cursor: pointer;
+    top:250px;
+}
+
+#g{
+    left:0;
+    opacity: 0.8;
+    transform:rotate(0deg);
+    transition: all 0.4s ease;
+}
+
+#d{
+    right:0;
+    opacity: 0.8;
+    transform:rotate(180deg);
+    transition: all 0.4s ease;
+}
+
+#g:hover{
+    transform:rotate(0deg) scale(1.1);
+    opacity: 1;
+}
+
+#d:hover{
+    transform:rotate(180deg) scale(1.1);
+    opacity: 1;
+}
+
+/*****************trait************/
+.trait{
+    width: 70%;
+    color: rgb(32, 32, 10) ;
+    border:solid 2px;
+    margin: 25%;
+    margin-top: 50px;
+    border-bottom-width: 4px;
+    margin-bottom: 70px;
+    padding-right: -10;
+}
+
+/*****************main*****************/
+.intro{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 100px 0px 100px;
+
+}
+.intro h1{
+    font-family: EB Garamond;
+    font-size: 38px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgba(68, 68, 6, 0.81);
+    padding: 20px;
+}
+
+.intro p{
+    text-align: center;
+    color: rgb(129, 129, 34);
+    font-size: 30px;
+    font-style: italic;
+}
+
+/***************************filtres********************/
+/* Style général du filtre */
+.margFiltre {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* Espace à droite du titre */
+.margFiltreTitre {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+/* Style des éléments du filtre */
+.filtreTexteIcons {
+  border: 2px solid #0a0909;
+  height: 50px;
+  margin-right: 20px;
+  display: flex;
+}
+
+
+/* Style du texte dans les éléments du filtre */
+.filtreTexte {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 52px;
+  text-align: center;
+  background-color: #ffffff;
+  color: rgb(129, 129, 34);
+  text-decoration: none; /* Pour enlever le soulignement des liens */
+}
+
+.filtreTexteIcons .filtreTexte {
+  text-decoration: none;
+}
+
+/* Changement de couleur au survol */
+.filtreTexteIcons:hover > .filtreTexte {
+  color: #59bc696a;
+}
+
+/* Changement de couleur de fond au survol */
+.filtreTexteIcons:hover > .filtreIcons {
+  color: white;
+  background-color: #fdfffd;
+}
+
+ /*.filtreIcons{
+   margin-left:-2px ;*/
+    /*border-radius: 25px;
+    width: 52px;
+    height: 50px;
+    color: rgb(5, 5, 30) ;
+    background-color: aliceblue;
+    line-height: 52px;
+    text-align: center;
+    
+}*/
+.chambree h2{
+  color: rgb(129, 129, 34);
+  font-family: display fair;
+    font-size: 38px;
+    font-weight: 400;
+    padding-left: 14px;
+    padding-bottom: 0px;
+    margin-top: 78px;
+
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(68, 68, 6, 0.691);
+  background-color: #0a0909;
+}
+.guest{
+    border: #0a0909 solid 1px;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .chambre {
+    width: calc(33% - 20px);
+    border: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .chambre:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 300px; /* Hauteur fixe pour l'image */
+    margin-bottom: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .photoo {
+    width: 200%;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .photo img {
+    width: 50%;
+    height: auto;
+  }
+  
+  .chambre h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(57 57 3 / 84%);
+  }
+  
+  .chambre .description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .column {
+    width: calc(50% - 10px);
+  }
+  
+  .chambre .description ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .chambre .description ul li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  .chambre .description ul li i {
+    margin-right: 5px;
+    color: rgb(129, 129, 34);
+  }
+  
+  .details {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: rgb(129, 129, 34);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  .chambree h2{
+    color: rgb(129, 129, 34);
+    font-family: display fair;
+    font-size: 38px;
+    font-weight: 400;
+    padding-left: 14px;
+    padding-bottom: 0px;
+    margin-top: 78px;
+  }
+  
+  
+  /**********************SUITES***************/
+  .suites{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+  }
+  .chambre2 {
+    width: calc(33% - 20px);
+    border: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .chambre2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img-container2 {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 300px; /* Hauteur fixe pour l'image */
+    margin-bottom: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .photo2{
+    width: 200%;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .photo2 img {
+    width: 50%;
+    height: auto;
+  }
+  
+  .chambre2 h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(57 57 3 / 84%);
+    
+  }
+  
+  .chambre2 .description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .column2 {
+    width: calc(50% - 10px);
+  }
+  
+  
+  .chambre2 .description ul li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  .chambre2 .description ul li i {
+    margin-right: 5px;
+    color: rgb(129, 129, 34);
+  }
+  
+  .details2{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: rgb(129, 129, 34);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  .chambree2 h2{
+    color: rgb(129, 129, 34);
+    font-family: display fair;
+    font-size: 38px;
+    font-weight: 400;
+    padding-left: 14px;
+    padding-bottom: 0px;
+    margin-top: 78px;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(68, 68, 6, 0.691);
+  background-color: #0a0909;
+  }
+  
+  
+  
+  
+  /****************SIGNATURES ET SUITES
+  *********************/
+  .signaturesetsuites{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .chambre3 {
+    width: calc(33% - 20px);
+    border: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .chambre3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img-container3 {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 300px; /* Hauteur fixe pour l'image */
+    margin-bottom: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .photo3{
+    width: 200%;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .photo3 img {
+    width: 50%;
+    height: auto;
+  }
+  
+  .chambre3 h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(57 57 3 / 84%);
+  }
+  
+  .chambre3 .description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .column3 {
+    width: calc(50% - 10px);
+  }
+  
+  .chambre3 .description ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .chambre3 .description ul li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  .chambre3 .description ul li i {
+    margin-right: 5px;
+    color: rgb(129, 129, 34);
+  }
+  
+  .details3{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: rgb(129, 129, 34);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  .chambree3 h2{
+    color: rgb(129, 129, 34);
+    font-family: display fair;
+    font-size: 38px;
+    font-weight: 400;
+    padding-left: 14px;
+    padding-bottom: 0px;
+    margin-top: 78px;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(68, 68, 6, 0.691);
+  background-color: #0a0909;
+  }
+  
+  
+  /************************footer****************/
+  .footer-custom {
+    background-color: rgb(88, 88, 15); /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte */
+    padding: 30px 0; /* Espacement intérieur du footer */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police de caractère */
+    border-top: 3px solid #ffd700; /* Bordure dorée en haut */
+}
+
+.footer-custom .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Largeur maximale du footer */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+.footer-custom .box {
+    flex: 1;
+    padding: 0 20px; /* Espacement intérieur de chaque boîte */
+    max-width: 350px; /* Largeur maximale de chaque boîte */
+}
+
+.footer-custom .box h3 {
+    margin-top: 0; /* Supprimer la marge supérieure du titre */
+    font-size: 24px; /* Taille de police du titre */
+    color: #080808; /* Couleur dorée */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    margin-bottom: 15px; /* Espacement en bas du titre */
+}
+
+.footer-custom .box ul {
+    list-style-type: none; /* Supprimer les puces de la liste */
+    padding: 0;
+}
+
+.footer-custom .box ul li {
+    margin-bottom: 10px;
+    font-size: 16px; /* Taille de police des éléments */
+}
+
+.footer-custom .contact-box {
+    text-align: center; /* Centrer le contenu de la boîte de contact */
+    background-color: #c5ca89; /* Couleur de fond de la boîte de contact */
+    padding: 20px; /* Espacement intérieur de la boîte de contact */
+    border-radius: 10px; /* Coins arrondis */
+    margin-top: 20px; /* Espacement entre la boîte de contact et les autres boîtes */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Ombre légère noire */
+}
+
+.footer-custom .contact-box ul li {
+    margin-bottom: 8px;
+    font-size: 16px; /* Taille de police des éléments de contact */
+}
+
+.footer-custom .contact-box h3 {
+    font-size: 24px; /* Taille de police du titre de la boîte de contact */
+    color: #f6f6dd; /* Couleur dorée */
+}
+
+/* Media query pour les écrans jusqu'à 460px de largeur */
+@media screen and (max-width: 460px) {
+    .footer-custom .box {
+        padding: 0;
+        margin-bottom: 20px;
+        max-width: none;
+        text-align: center; /* Centrage du contenu dans les boîtes */
+    }
+    .footer-custom .contact-box {
+        padding: 15px; /* Espacement intérieur réduit */
+    }
+    .footer-custom .box h3,
+    .footer-custom .contact-box h3 {
+        font-size: 18px; /* Taille de police du titre réduite */
+    }
+    .footer-custom .box ul li,
+    .footer-custom .contact-box ul li {
+        font-size: 14px; /* Taille de police des éléments réduite */
+    }
+}
+
+  /* Base CSS */
+  
+  /* Ajout du responsive */
+  
+  @media screen and (max-width: 460px) {
+    /* Adjustments for search bar */
+    .recherche input[type="text"] {
+        width: 100%; /* Use full width */
+    }
+
+    /* Adjustments for carousel */
+    #carrousel {
+        width: 100%; /* Use full width */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .photo {
+        width: 100%; /* Use full width for each photo */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .button {
+        display: none; /* Hide carousel buttons */
+    }
+
+    /* Adjustments for main sections */
+    main, .intro, .filtre, .chambree, .suites, .chambree2, .chambre2, .chambree3, .chambre3 {
+        width: 100%; /* Use full width */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    /* Adjustments for individual sections */
+    .chambre, .chambre2, .chambre3 {
+        width: 100%; /* Use full width */
+        margin-right: 0; /* Remove margin-right */
+    }
+}
+
+
+

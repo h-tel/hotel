@@ -1,0 +1,79 @@
+.footer-custom {
+    background-color: #111; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte */
+    padding: 30px 0; /* Espacement intérieur du footer */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police de caractère */
+    border-top: 3px solid #ffd700; /* Bordure dorée en haut */
+}
+
+.footer-custom .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Largeur maximale du footer */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+.footer-custom .box {
+    flex: 1;
+    padding: 0 20px; /* Espacement intérieur de chaque boîte */
+    max-width: 350px; /* Largeur maximale de chaque boîte */
+}
+
+.footer-custom .box h3 {
+    margin-top: 0; /* Supprimer la marge supérieure du titre */
+    font-size: 24px; /* Taille de police du titre */
+    color: #ffd700; /* Couleur dorée */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    margin-bottom: 15px; /* Espacement en bas du titre */
+}
+
+.footer-custom .box ul {
+    list-style-type: none; /* Supprimer les puces de la liste */
+    padding: 0;
+}
+
+.footer-custom .box ul li {
+    margin-bottom: 10px;
+    font-size: 16px; /* Taille de police des éléments */
+}
+
+.footer-custom .contact-box {
+    text-align: center; /* Centrer le contenu de la boîte de contact */
+    background-color: #222; /* Couleur de fond de la boîte de contact */
+    padding: 20px; /* Espacement intérieur de la boîte de contact */
+    border-radius: 10px; /* Coins arrondis */
+    margin-top: 20px; /* Espacement entre la boîte de contact et les autres boîtes */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Ombre légère noire */
+}
+
+.footer-custom .contact-box ul li {
+    margin-bottom: 8px;
+    font-size: 16px; /* Taille de police des éléments de contact */
+}
+
+.footer-custom .contact-box h3 {
+    font-size: 24px; /* Taille de police du titre de la boîte de contact */
+    color: #ffd700; /* Couleur dorée */
+}
+
+/* Media query pour les écrans jusqu'à 460px de largeur */
+@media screen and (max-width: 460px) {
+    .footer-custom .box {
+        padding: 0;
+        margin-bottom: 20px;
+        max-width: none;
+        text-align: center; /* Centrage du contenu dans les boîtes */
+    }
+    .footer-custom .contact-box {
+        padding: 15px; /* Espacement intérieur réduit */
+    }
+    .footer-custom .box h3,
+    .footer-custom .contact-box h3 {
+        font-size: 18px; /* Taille de police du titre réduite */
+    }
+    .footer-custom .box ul li,
+    .footer-custom .contact-box ul li {
+        font-size: 14px; /* Taille de police des éléments réduite */
+    }
+}

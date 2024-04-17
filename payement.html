@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payement.css">
+    <script src="https://kit.fontawesome.com/69ad219ea9.js" crossorigin="anonymous"></script>
+    <title>ECOMMERCE</title>
+</head>
+
+<body>
+    <!--la tête de ma page html-->
+    <header>
+       <nav class="navbar">
+    <div class="container">
+        <div class="logo">Adiway</div>
+        <ul class="menu">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Chambres et Suites</a></li>
+            <li><a href="#">Réserver</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</nav>
+
+<div class="carousel">
+    <!-- Contenu du carrousel ici -->
+</div>
+
+<script>
+// Toggle du menu burger
+function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    var burger = document.querySelector('.burger');
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+}
+
+// Changement de style de la navigation lors du défilement
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+        navbar.classList.add('fixed');
+    } else {
+        navbar.classList.remove('fixed');
+    }
+});
+</script>
+    </header>
+    <div class="payment-container">
+        <h1>Paiement</h1>
+
+        <form>
+            <label for="card-number">Numéro de Carte :</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+            <label for="expiry-date">Date d'Expiration :</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+            <label for="cvv">CVV :</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+            <button type="submit">Payer Maintenant</button>
+
+        </form>
+
+        <div class="moyenpaiment">
+            <img src="photo/téléchargement.jpeg">
+        </div>
+    </div>
+
+   
+
+<footer class="footer footer-custom">
+    <div class="container">
+        <div class="box">
+            <h3>Actualités</h3>
+            <ul>
+                <li>Nos Escapades secrètes juste pour vous</li>
+                <li>Détendez-vous grâce à nos massages</li>
+                <li>L'été est arrivé</li>
+                <li>Automne chez nous en Luviana </li>
+                <li>Live Music & Concerts autour de vous</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3>Pour la Clientèle</h3>
+            <ul>
+                <li>A Propos de A&A Hotels</li>
+                <li>Service client</li>
+                <li>En savoir plus</li>
+                <li>Informations Légales</li>
+                <li>Termes & Conditions</li>
+            </ul>
+        </div>
+
+        <div class="box contact-box">
+            <h3>Contactez Nous</h3>
+            <address>
+                <ul>
+                    <li>666 Grand Avenue Coconut, France 123456</li>
+                    <li><i class="far fa-envelope"></i> A&A_Hotels@gmail.com</li>
+                    <li><i class="far fa-phone-alt"></i> 01 23 45 67 89 10</li>
+                    <li><i class="far fa-phone-alt"></i> 01 23 45 67 89 10</li>
+                    <li><i class="far fa-comments"></i> Service clients</li>
+                </ul>
+            </address>
+        </div>
+    </div>
+</footer>
+
+</body>

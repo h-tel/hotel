@@ -1,0 +1,428 @@
+header{
+    background-color: black;
+    height: 65px;
+    display: flex;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    /*background-image: url('universe.jpg'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin vers votre image de fond */
+    /*background-size: cover; /* Ajuste la taille de l'image pour couvrir l'ensemble de la fenêtre du navigateur */
+  
+}
+a{
+    text-decoration: none;
+    
+}
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Styles pour la navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+
+  background-color: transparent;
+  padding: 20px 0;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.navbar.fixed {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond de navigation transparent */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: rgb(88, 88, 15);
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ffd700; /* Couleur dorée au survol */
+}
+
+/* Styles pour le menu burger */
+.burger {
+  display: none; /* Masquer le menu burger par défaut */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Rotation des lignes pour le menu burger */
+.burger.open .line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open .line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Media query pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+  .menu {
+      display: none; /* Masquer le menu principal sur les appareils mobiles */
+  }
+
+  .burger {
+      display: flex; /* Afficher le menu burger sur les appareils mobiles */
+  }
+
+  .navbar.fixed {
+      background-color: rgba(0, 0, 0, 0.9); /* Fond de navigation transparent */
+  }
+
+  .container {
+      padding: 0 10px;
+  }
+
+  .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding-top: 80px; /* Espacement pour éviter que le menu se superpose au haut de la page */
+      z-index: 998; /* Assure que le menu burger s'affiche au-dessus du carrousel */
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+  }
+
+  .menu.open {
+      transform: translateY(0);
+  }
+
+  .menu li {
+      margin: 15px 0;
+  }
+
+  .menu li a {
+      color: #fff;
+      font-size: 18px;
+  }
+}
+/*******************promooo****************/
+.promo-container {
+    display: flex;
+    
+  }
+  
+  .promo-box {
+    border-radius: 10px;
+    background: linear-gradient(#dacc9f, #cb9f65) ;
+    padding: 20px;
+    
+  }
+  
+  .promo-box p {
+    margin: 0;
+  }
+  
+/******************* Header  *****************/
+
+.logo{
+    display: flex;
+    align-items: center; 
+
+}
+.logo p{
+    color: white;
+    font-size: 32px;
+    font-family: helvetica;
+}
+.logo a img{
+     
+    width: 16%; 
+    height: auto;
+    margin-top: 10px;
+}
+
+.logo-img{
+    width: 107px;
+    margin-top: 4px;
+}
+a.lien_logo {
+  display: flex;
+}
+.payment-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .payment-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+/***********************footer******************/
+.imagemini{
+    height: 140px;
+    width: 140px;
+}
+.footer{
+    background-color:rgba(0, 0, 0, 0.823);
+    
+    
+    border-bottom-width: 50px;
+    margin-top: 150px;
+    padding-bottom: 50px
+}
+.logofoot{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.moyenpaiment img{
+  width: 240px;
+  height: auto;
+  padding: 23px;
+}
+
+ /************************footer****************/
+ .footer-custom {
+  background-color: rgb(88, 88, 15); /* Couleur de fond du footer */
+  color: #fff; /* Couleur du texte */
+  padding: 30px 0; /* Espacement intérieur du footer */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police de caractère */
+  border-top: 3px solid #ffd700; /* Bordure dorée en haut */
+}
+
+.footer-custom .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Largeur maximale du footer */
+  margin: 0 auto; /* Centrage horizontal */
+}
+
+.footer-custom .box {
+  flex: 1;
+  padding: 0 20px; /* Espacement intérieur de chaque boîte */
+  max-width: 350px; /* Largeur maximale de chaque boîte */
+}
+
+.footer-custom .box h3 {
+  margin-top: 0; /* Supprimer la marge supérieure du titre */
+  font-size: 24px; /* Taille de police du titre */
+  color: #080808; /* Couleur dorée */
+  text-transform: uppercase; /* Convertir le texte en majuscules */
+  margin-bottom: 15px; /* Espacement en bas du titre */
+}
+
+.footer-custom .box ul {
+  list-style-type: none; /* Supprimer les puces de la liste */
+  padding: 0;
+  color: white;
+}
+
+.footer-custom .box ul li {
+  margin-bottom: 10px;
+  font-size: 16px; /* Taille de police des éléments */
+}
+
+.footer-custom .contact-box {
+  text-align: center; /* Centrer le contenu de la boîte de contact */
+  background-color: #c5ca89; /* Couleur de fond de la boîte de contact */
+  padding: 20px; /* Espacement intérieur de la boîte de contact */
+  border-radius: 10px; /* Coins arrondis */
+  margin-top: 20px; /* Espacement entre la boîte de contact et les autres boîtes */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Ombre légère noire */
+}
+
+.footer-custom .contact-box ul li {
+  margin-bottom: 8px;
+  font-size: 16px; /* Taille de police des éléments de contact */
+}
+
+.footer-custom .contact-box h3 {
+  font-size: 24px; /* Taille de police du titre de la boîte de contact */
+  color: #f6f6dd; /* Couleur dorée */
+}
+
+/* Media query pour les écrans jusqu'à 460px de largeur */
+@media screen and (max-width: 460px) {
+  .footer-custom .box {
+      padding: 0;
+      margin-bottom: 20px;
+      max-width: none;
+      text-align: center; /* Centrage du contenu dans les boîtes */
+  }
+  .footer-custom .contact-box {
+      padding: 15px; /* Espacement intérieur réduit */
+  }
+  .footer-custom .box h3,
+  .footer-custom .contact-box h3 {
+      font-size: 18px; /* Taille de police du titre réduite */
+  }
+  .footer-custom .box ul li,
+  .footer-custom .contact-box ul li {
+      font-size: 14px; /* Taille de police des éléments réduite */
+  }
+}
+
+
+
+@media screen and (max-width: 425px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    /*background-image: url('universe.jpg'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin vers votre image de fond */
+    /*background-size: cover; /* Ajuste la taille de l'image pour couvrir l'ensemble de la fenêtre du navigateur */
+}
+
+a {
+    text-decoration: none;
+}
+
+/*******************promooo****************/
+.promo-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.promo-box {
+    border-radius: 10px;
+    background: linear-gradient(#dacc9f, #cb9f65);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.promo-box p {
+    margin: 0;
+}
+
+/******************* Header  *****************/
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo p {
+    color: white;
+    font-size: 32px;
+    font-family: helvetica;
+}
+
+.logo a img {
+    
+    height: auto;
+    margin-top: 10px;
+}
+
+.logo-img {
+    width: 107px;
+    margin-top: 4px;
+}
+
+a.lien_logo {
+    display: flex;
+}
+
+.payment-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.payment-container h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-
+  form {
+    width: 100%;
+  }
+
+  label,
+  input {
+    width: 100%;
+  }
+}
+}

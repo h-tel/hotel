@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="chambre.css">
+  <script src="https://kit.fontawesome.com/69ad219ea9.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+  <title>HOTEL</title>
+  
+</head>
+
+<body>
+  
+  <nav class="navbar">
+    <div class="container">
+        <div class="logo">A&A Hotels</div>
+        <ul class="menu">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="index.html">Chambres et Suites</a></li>
+            <li><a href="reservation.html">Réserver</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</nav>
+
+<div class="carousel">
+    <!-- Contenu du carrousel ici -->
+</div>
+
+<script>
+// Toggle du menu burger
+function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    var burger = document.querySelector('.burger');
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+}
+
+// Changement de style de la navigation lors du défilement
+window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+        navbar.classList.add('fixed');
+    } else {
+        navbar.classList.remove('fixed');
+    }
+});
+</script>
+
+  <!--
+        <div class="recherche">
+            <input type="text" placeholder="SEARCH">
+            <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+
+        <hr class="trait">
+        -->
+  <div id="carrousel">
+    <div id="container">
+    </div>
+    <img src="photo/button (1).png" class="button" id="g" />
+    <img src="photo/button (1).png" class="button" id="d" />
+
+  </div>
+  <script>
+    document.body.onload = function () {
+      nbr = 4;
+      p = 0;
+      container = document.getElementById("container");
+      g = document.getElementById("g");
+      d = document.getElementById("d");
+      container.style.width = (100 * nbr) + "%";
+      for (i = 1; i <= nbr; i++) {
+        div = document.createElement("div");
+        div.className = "photo";
+        div.style.backgroundImage = "url('photo/im" + i + ".jpg')";
+        container.appendChild(div);
+      }
+      afficherMasquer();
+
+    }
+    g.onclick = function () {
+      if (p > -nbr + 1)
+        p--;
+      container.style.transform = "translate(" + p * 25 + "%)";
+      container.style.transition = "all 4s ease";
+      afficherMasquer();
+
+    }
+    d.onclick = function () {
+      if (p < 0)
+        p++;
+      container.style.transform = "translate(" + p * 25 + "%)";
+      container.style.transition = "all 4s ease";
+      afficherMasquer();
+
+
+    }
+    function afficherMasquer() {
+      if (p == -nbr + 1)
+        g.style.visibility = "hidden";
+      else
+        g.style.visibility = "visible";
+
+      if (p == 0)
+        d.style.visibility = "hidden";
+      else
+        d.style.visibility = "visible";
+    }
+
+  </script>
+
+  <main>
+    <hr class="trait">
+
+    <div class="intro">
+      <h1>CHAMBRES ET SUITES</h1>
+      <p>« Arrêter le mouvement des heures à cet instant lumineux, créer des souvenirs, dans le bonheur d’un cadre
+        enchanteur. »</p>
+      <p>Marcel Proust</p>
+    </div>
+
+    <hr class="trait">
+    <div class="filtre margFiltre">
+      <div class="margFiltreTitre">
+        <!--<h3>VIEW ALL</h3>-->
+      </div>
+      <a href="#view-all" class="filtreTexteIcons view-all">
+        <div class="filtreTexte">VIEW ALL</div>
+      </a>
+      <a href="#guest-rooms" class="filtreTexteIcons guest-rooms">
+        <div class="filtreTexte">GUEST ROOMS</div>
+      </a>
+      <a href="#suites" class="filtreTexteIcons suites">
+        <div class="filtreTexte">SUITES</div>
+      </a>
+      <a href="#signature-suites" class="filtreTexteIcons signature-suites">
+        <div class="filtreTexte">SIGNATURE SUITES</div>
+      </a>
+    </div>
+
+    <hr class="trait">
+  </main>
+
+  <section id="view-all">
+    <!-- Contenu de la section "VIEW ALL" -->
+
+
+    <!------------------------------GUEST ROOMS--------------------------->
+    <section id="guest-rooms">
+      <!-- Contenu de la section "GUEST ROOMS" -->
+
+      <div class="chambree">
+        <h2>GUEST ROOMS</h2>
+      </div>
+      <main>
+        <section class="chambre">
+          <div class="img-container">
+            <div class="photoo">
+              <img src="photo/guest (1).jpg" alt="Chambre 1">
+            </div>
+          </div>
+          <h2>Chambre Oasis</h2>
+          <div class="description">
+            <p>Une retraite paisible avec vue sur le jardin, parfaite pour se détendre après une journée bien remplie.
+            </p>
+          </div>
+          <div class="details">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section>
+        <section class="chambre">
+          <div class="img-container">
+            <div class="photoo">
+              <img src="photo/guest2 (1).jpg" alt="Chambre 2">
+            </div>
+          </div>
+          <h2>Suite Horizon</h2>
+          <div class="description">
+            <p>Offrant une vue panoramique sur la ville, cette suite lumineuse est idéale pour ceux qui recherchent un
+              séjour urbain élégant.</p>
+          </div>
+          <div class="details">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section>
+        <section class="chambre">
+          <div class="img-container">
+            <div class="photoo">
+              <img src="photo/guest3 (1).jpg" alt="Chambre 3">
+            </div>
+          </div>
+          <h2>Chambre Cosy</h2>
+          <div class="description">
+            <p>Un refuge confortable doté de commodités modernes, parfait pour une escapade intime.</p>
+          </div>
+          <div class="details">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section> 
+    </section>
+   </main>
+    <!----------------------------SUITES----------------------->
+    <section id="suites">
+      <!-- Contenu de la section "SUITES" -->
+
+      <div class="chambree2">
+        <h2>SUITES</h2>
+      </div>
+
+      <section class="suites">
+        <section class="chambre2">
+          <div class="img-container2">
+            <div class="photo2">
+              <img src="photo/suite (1).jpg" alt="Chambre 1">
+            </div>
+          </div>
+          <h2>Suite Royale</h2>
+          <div class="description">
+            <p>Un luxe incomparable dans cette suite spacieuse avec un salon séparé et une vue imprenable sur les
+              environs.</p>
+          </div>
+
+          <div class="details2">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section>
+        <section class="chambre2">
+          <div class="img-container2">
+            <div class="photo2">
+              <img src="photo/suite2 (1).jpg" alt="Chambre 2">
+            </div>
+          </div>
+          <h2>Suite Prestige</h2>
+          <div class="description">
+            <p>Des détails raffinés et un service haut de gamme vous attendent dans cette suite élégante, parfaite pour
+              les voyageurs exigeants.
+            </p>
+          </div>
+          <div class="details2">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section>
+        <section class="chambre2">
+          <div class="img-container2">
+            <div class="photo2">
+              <img src="photo/suite3 (1).jpg" alt="Chambre 3">
+            </div>
+          </div>
+          <h2>Suite Exécutive </h2>
+          <div class="description">
+            <p>Un espace élégant et fonctionnel, parfait pour les voyageurs d'affaires ou les escapades de luxe en
+              ville.</p>
+          </div>
+          <div class="details2">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section>
+      </section>
+
+    </section>
+    <!----------------------------SIGNATURES ET SUITES----------------------------->
+    <section id="signature-suites">
+      <!-- Contenu de la section "SIGNATURE SUITES" -->
+
+
+      <div class="chambree3">
+        <h2>SIGNATURES ET SUITES</h2>
+      </div>
+
+      <section class="signaturesetsuites">
+
+
+        <section class="chambre3">
+          <div class="img-container3">
+            <div class="photo3">
+              <img src="photo/royal (1).jpeg" alt="Chambre 1">
+            </div>
+          </div>
+          <h2>Chambre Charme</h2>
+          <div class="description">
+            <p>Inspirée par l'histoire locale, cette chambre allie élégance traditionnelle et confort moderne pour une
+              expérience unique.</p>
+          </div>
+          <div class="details3">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section>
+        <section class="chambre3">
+          <div class="img-container3">
+            <div class="photo3">
+              <img src="photo/royal (1).jpg" alt="Chambre 2">
+            </div>
+          </div>
+          <h2>Suite Serenity </h2>
+          <div class="description">
+            <p>Une oasis de calme et de sérénité, cette suite offre un refuge relaxant avec une ambiance apaisante et
+              des équipements de luxe.</p>
+          </div>
+          <div class="details3">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section>
+        <section class="chambre3">
+          <div class="img-container3">
+            <div class="photo3">
+              <img src="photo/royal-nv.jpg" alt="Chambre 3">
+            </div>
+          </div>
+          <h2>Chambre Artisan </h2>
+          <div class="description">
+            <p>Mettant en valeur l'artisanat local et le design contemporain, cette chambre offre une expérience
+              artistique et inspirante.</p>
+          </div>
+          <div class="details3">
+            <button><a href="reservation.html">Réserver</a></button>
+            <button>Détails</button>
+          </div>
+        </section>
+      </section>
+    </section>
+  </section>
+
+    <footer class="footer footer-custom">
+      <div class="container">
+          <div class="box">
+              <h3>Actualités</h3>
+              <ul>
+                  <li>Nos Escapades secrètes juste pour vous</li>
+                  <li>Détendez-vous grâce à nos massages</li>
+                  <li>L'été est arrivé</li>
+                  <li>Automne chez nous en Luviana </li>
+                  <li>Live Music & Concerts autour de vous</li>
+              </ul>
+          </div>
+  
+          <div class="box">
+              <h3>Pour la Clientèle</h3>
+              <ul>
+                  <li>A Propos de A&A Hotels</li>
+                  <li>Service client</li>
+                  <li>En savoir plus</li>
+                  <li>Informations Légales</li>
+                  <li>Termes & Conditions</li>
+              </ul>
+          </div>
+  
+          <div class="box contact-box">
+              <h3>Contactez Nous</h3>
+              <address>
+                  <ul>
+                      <li>666 Grand Avenue Coconut, France 123456</li>
+                      <li><i class="far fa-envelope"></i> A&A_Hotels@gmail.com</li>
+                      <li><i class="far fa-phone-alt"></i> 01 23 45 67 89 10</li>
+                      <li><i class="far fa-phone-alt"></i> 01 23 45 67 89 10</li>
+                      <li><i class="far fa-comments"></i> Service clients</li>
+                  </ul>
+              </address>
+          </div>
+      </div>
+  </footer>
+  
+
+
+
+
+
+
+</body>
+
+</html>
