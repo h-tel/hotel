@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" link href="style.css" rel="stylesheet" />
+
+    <title>A&A Serene Hights Hotels</title>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="container">
+<div class="logo">A&A Hotels</div>
+<ul class="menu">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="A propos.html">À propos</a></li>
+<li><a href="#">Chambres et Suites</a></li>
+<li><a href="#">Réserver</a></li>
+
+</ul>
+<div class="burger" onclick="toggleMenu()">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+</div>
+</nav>
+
+<div class="carousel">
+<!-- Contenu du carrousel ici -->
+</div>
+
+<script>
+// Toggle du menu burger
+function toggleMenu() {
+var menu = document.querySelector('.menu');
+var burger = document.querySelector('.burger');
+menu.classList.toggle('open');
+burger.classList.toggle('open');
+}
+
+// Changement de style de la navigation lors du défilement
+window.addEventListener('scroll', function() {
+var navbar = document.querySelector('.navbar');
+if (window.scrollY > 100) {
+navbar.classList.add('fixed');
+} else {
+navbar.classList.remove('fixed');
+}
+});
+</script>
+          </ul>
+        </nav>
+        <header>
+          <div class="section__container">
+            <div class="header__content">
+              <h1> Serenity & Memories</h1>
+              <p> "Le luxe véritable consiste à avoir le temps et l'espace pour se sentir libre." - Coco Chanel
+              </p>
+              <button>En savoir plus</button>
+            </div>
+          </div>
+        </header>
+    <section class="journey__container">
+        <div class="section__container">
+            <h2 class="section__title">En vedette </h2>
+            <p class="section__subtitle">
+                "Le véritable luxe réside dans les expériences qui enrichissent notre âme et apaisent notre esprit."<em>- AWA</em></p>
+            <div class="journey__grid">
+                <div class="country__card">
+                    <img src="/Site-E-commerce-/images Hotel/SuiteBedASpen.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Chambres</span>
+                    </div>
+                </div>
+               
+                <div class="country__card">
+                    <img src="/Site-E-commerce-/images Hotel/reisetopia-3n7bxyRYQ24-unsplash.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Suites</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="/Site-E-commerce-/images Hotel/suiteHotel3.jpg " alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Suite deluxe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--Fin containers-->
+
+
+
+    <!--Bannière Evenements-->
+    <section class="banner__container">
+        <div class="section__container">
+            <div class="banner__content">
+                <h2>Evènements Saisonniers</h2>
+                <p>
+                    Profitez de nos évenements inédits pour célébrer les fêtes et les vacances avec élégance. Réservez
+                    dès
+                    maintenant et offrez-vous une escapade mémorable à A&A, où chaque moment est une
+                    occasion spéciale.
+                </p>
+                <button>Voir Evenements & tarifs spéciaux</button>
+            </div>
+        </div>
+    </section>
+     <!-- fin Bannière Evenements-->
+
+<!--GRIDS-->
+    <section class="display__container">
+        <div class="section__container">
+            <h2 class="section__title"> Notre Histoire </h2>
+            <p class="section__subtitle">
+                Dans les ruelles pavées d'une ville historique, un bâtiment majestueux émerge, porteur d'une histoire riche et envoûtante. Autrefois un manoir ancestral, il a été transformé en un havre de luxe et de raffinement connu sous le nom deA&A. Fondé il y a des décennies par une famille passionnée d'hospitalité, l'hôtel a commencé modestement comme une auberge pittoresque, accueillant des voyageurs fatigués de leur voyage.
+            </p>
+            <div class="display__grid">
+                <div class="display__card grid-1">
+                    <img src="/Site-E-commerce-/images Hotel/sablebleu.jpg" alt="grid" />
+                </div>
+                <div class="display__card">
+                    <i class="ri-earth-line"></i>
+                    <h4>L'hotel 5 stars</h4>
+                    <p>Dans une ville historique, A&A est devenu un sanctuaire de luxe et de raffinement. Témoin d'une histoire riche, chaque pierre résonne des souvenirs passés et de la promesse de nouveaux moments inoubliables à créer</p>
+                </div>
+                <div class="display__card">
+                    <img src="/Site-E-commerce-/images Hotel/fivestar.jpg" alt="grid" />
+                </div>
+                <div class="display__card">
+                    <img src="/Site-E-commerce-/images Hotel/Profile.jpg" alt="grid" />
+                </div>
+                <div class="display__card">
+                    <i class="ri-road-map-line"></i>
+                    <h4>Madame Adwiléa</h4>
+                    <p>L'histoire de l'hôtel Miss Adwilea est un récit captivant de succès et d'excellence. Fondé il y a plusieurs décennies par la visionnaire Adwilea herself, l'hôtel est rapidement devenu une destination de prédilection pour les voyageurs exigeants à la recherche d'une expérience luxueuse et mémorable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FIN Grids-->
+   
+   
+
+   
+    <!--FOOTER-->
+    <footer class="footer footer-custom">
+        <div class="container">
+            <div class="box">
+                <h3>Actualités</h3>
+                <ul>
+                    <li>Nos Escapades secrètes juste pour vous</li>
+                    <li>Détendez-vous grâce à nos massages</li>
+                    <li>L'été est arrivé</li>
+                    <li>Automne chez nous en Luviana </li>
+                    <li>Live Music & Concerts autour de vous</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Pour la Clientèle</h3>
+                <ul>
+                    <li>A Propos de A&A Hotels</li>
+                    <li>Service client</li>
+                    <li>En savoir plus</li>
+                    <li>Informations Légales</li>
+                    <li>Termes & Conditions</li>
+                </ul>
+            </div>
+            <div class="box contact-box">
+                <h3>Contactez Nous</h3>
+                <address>
+
+                     <!--MAPS-->
+            <section class="map top">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp"
+                    width="300px" height="300px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+
+            <!--FIN MAPS-->
+                    <ul>
+                        <li>666 Grand Avenue Coconut, France 123456</li>
+                        <li><i class="far fa-envelope"></i> A&A_Hotels@gmail.com</li>
+                        <li><i class="far fa-phone-alt"></i> 01 23 45 67 89 10</li>
+                        <li><i class="far fa-phone-alt"></i> 01 23 45 67 89 10</li>
+                        <li><i class="far fa-comments"></i> Service clients</li>
+                         
+        
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </footer>
+    <!--fin FOOTER-->

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="A propos.css" />
+  <title>A&A Hotel</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+    <div class="logo">A&A Hotels</div>
+    <ul class="menu">
+    <li><a href="/Site-E-commerce-/index.html">Accueil</a></li>
+    <li><a href="/Site-E-commerce-/A propos.html">À propos</a></li>
+    <li><a href="#">Chambres et Suites</a></li>
+    <li><a href="#">Réserver</a></li>
+    
+    </ul>
+    <div class="burger" onclick="toggleMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    </div>
+    </div>
+    </nav>
+    
+    <div class="carousel">
+    <!-- Contenu du carrousel ici -->
+    </div>
+    
+    <script>
+    // Toggle du menu burger
+    function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    var burger = document.querySelector('.burger');
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+    }
+    
+    // Changement de style de la navigation lors du défilement
+    window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+    navbar.classList.add('fixed');
+    } else {
+    navbar.classList.remove('fixed');
+    }
+    });
+    </script>
+  <header>
+    <div class="section__container">
+      <div class="header__content">
+        <h1>A propos de Nous</h1>
+        <p>
+          Que vous soyez en voyage d'affaires ou à la recherche d'une escapade relaxante, notre équipe
+          dévouée veillera à ce que chaque moment de votre séjour soit parfaitement orchestré.
+        </p>
+        <button>En savoir plus</button>
+      </div>
+    </div>
+  </header>
+
+ 
+  <section class="journey__container">
+    <div class="section__container">
+        <h2 class="section__title">Nos emplacements</h2>
+        <p class="section__subtitle">
+            "Le véritable luxe réside dans les expériences qui enrichissent notre âme et apaisent notre esprit."<em>- AWA</em></p>
+        <div class="journey__grid">
+            <div class="country__card">
+                <img src="/Site-E-commerce-/images Hotel/HotelBlueblack.jpg" alt="country" />
+                <div class="country__name">
+                    <i class="ri-map-pin-2-fill"></i>
+                    <span>Vernezza, Italie</span>
+                </div>
+            </div>
+           
+            <div class="country__card">
+                <img src="/Site-E-commerce-/images Hotel/pinkskyhotel.jpg" alt="country" />
+                <div class="country__name">
+                    <i class="ri-map-pin-2-fill"></i>
+                    <span>San Francisco</span>
+                </div>
+            </div>
+            <div class="country__card">
+              <img src="/Site-E-commerce-/images Hotel/Arabicwindows.jpg" alt="country" />
+              <div class="country__name">
+                  <i class="ri-map-pin-2-fill"></i>
+                  <span>Marrakech</span>
+              </div>
+          </div>
+          <div class="country__card">
+            <img src="/Site-E-commerce-/images Hotel/bluewatermirror.jpg" alt="country" />
+            <div class="country__name">
+                <i class="ri-map-pin-2-fill"></i>
+                <span>Navaggio, Grèce</span>
+            </div>
+        </div>
+        <div class="country__card">
+          <img src="/Site-E-commerce-/images Hotel/countryimg.jpg" alt="country" />
+          <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Phi Phi Island, Thailande</span>
+          </div>
+      </div>
+            <div class="country__card">
+                <img src="/Site-E-commerce-/images Hotel/aspen.jpg " alt="country" />
+                <div class="country__name">
+                    <i class="ri-map-pin-2-fill"></i>
+                    <span>Aspen</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Fin containers-->
+
+  
+  <section class="banner__container">
+    <div class="section__container">
+      <div class="banner__content">
+        <h2>Nos Services</h2>
+        <p>
+          Profitez de tarifs spéciaux pour célébrer les fêtes et les vacances avec élégance. Réservez dès maintenant et
+          offrez-vous une escapade mémorable à A&A Serene Hights, où chaque moment est une occasion spéciale.
+        </p>
+        <button>Voir nos Spa & Yatchs</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--GRIDS-->
+  <section class="display__container">
+    <div class="section__container">
+        <h2 class="section__title"> Nos restaurants </h2>
+        <p class="section__subtitle">
+          Explorez notre gamme de services personnalisés conçus pour répondre à vos besoins les plus exigeants, où l'excellence du service rencontre votre satisfaction ultime.
+        </p>
+        <div class="display__grid">
+            <div class="display__card grid-1">
+                <img src="" alt="grid" />
+            </div>
+            <div class="display__card">
+                <i class="ri-earth-line"></i>
+                <h4>Passioné d'excellence gastronomique</h4>
+                <p>
+                  Depuis son ouverture, l'hôtel a accueilli des voyageurs du monde entier, des célébrités aux hommes d'affaires en passant par les familles en vacances. Chaque visiteur a été séduit par le charme unique de l'établissement, des chambres somptueuses aux délices culinaires servis dans ses restaurants primés.</p>
+            </div>
+            <div class="display__card">
+                <img src="/Site-E-commerce-/images Hotel/Hamam2.jpg" alt="grid" />
+            </div>
+            <div class="display__card">
+                <img src="/Site-E-commerce-/images Hotel/Massage.jpg" alt="grid" />
+            </div>
+            <div class="display__card">
+                <i class="ri-road-map-line"></i>
+                <h4>Spa</h4>
+<p>Découvrez une oasis de détente et de renouveau au sein de notre spa, où chaque soin est conçu pour apaiser votre esprit, nourrir votre corps et raviver votre âme</p>            </div>
+        </div>
+    </div>
+</section>
+<!--FIN Grids-->
+
+
+<section class="banner__container">
+  <div class="section__container">
+    <div class="banner__content">
+      <h2>Nos Services</h2>
+      <p>
+        Profitez de tarifs spéciaux pour célébrer les fêtes et les vacances avec élégance. Réservez dès maintenant et
+        offrez-vous une escapade mémorable à A&A Serene Hights, où chaque moment est une occasion spéciale.
+      </p>
+      <button>Voir nos Spa & Yatchs</button>
+    </div>
+  </div>
+</section>
+       
+  <!--GRIDS-->
+  <section class="display__container">
+    <div class="section__container">
+        <h2 class="section__title"> Nos Services </h2>
+        <p class="section__subtitle">
+          Explorez notre gamme de services personnalisés conçus pour répondre à vos besoins les plus exigeants, où l'excellence du service rencontre votre satisfaction ultime.
+        </p>
+        <div class="display__grid">
+            <div class="display__card grid-1">
+                <img src="/Site-E-commerce-/images Hotel/istockphoto-1454263865-612x612.jpg" alt="grid" />
+            </div>
+            <div class="display__card">
+               
+                <h4>Hammam</h4>
+                <p>Plongez dans une expérience de relaxation ultime au hammam de notre hôtel, où le luxe rencontre la tradition pour vous offrir un moment de bien-être absolu.</p>
+            </div>
+            <div class="display__card">
+                <img src="/Site-E-commerce-/images Hotel/Hamam2.jpg" alt="grid" />
+            </div>
+            <div class="display__card">
+                <img src="/Site-E-commerce-/images Hotel/Massage.jpg" alt="grid" />
+            </div>
+            <div class="display__card">
+                
+                <h4>Spa</h4>
+<p>Découvrez une oasis de détente et de renouveau au sein de notre spa, où chaque soin est conçu pour apaiser votre esprit, nourrir votre corps et raviver votre âme</p>            </div>
+        </div>
+    </div>
+</section>
+<!--FIN Grids-->
+
+
+
+ 
+      <h4>A&A Hotels</h4>
+  
+   
+      <!--FOOTER-->
+    <footer class="footer footer-custom">
+      <div class="container">
+          <div class="box">
+              <h3>Actualités</h3>
+              <ul>
+                  <li>Nos Escapades secrètes juste pour vous</li>
+                  <li>Détendez-vous grâce à nos massages</li>
+                  <li>L'été est arrivé</li>
+                  <li>Automne chez nous en Luviana </li>
+                  <li>Live Music & Concerts autour de vous</li>
+              </ul>
+          </div>
+          <div class="box">
+              <h3>Pour la Clientèle</h3>
+              <ul>
+                  <li>A Propos de A&A Hotels</li>
+                  <li>Service client</li>
+                  <li>En savoir plus</li>
+                  <li>Informations Légales</li>
+                  <li>Termes & Conditions</li>
+              </ul>
+          </div>
+          <div class="box contact-box">
+              <h3>Contactez Nous</h3>
+              <address>
+                   <!--MAPS-->
+          <section class="map top">
+              <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp"
+                  width="300px" height="300px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </section>
+
+          <!--FIN MAPS-->
+
+                  <ul>
+                      <li>666 Grand Avenue Coconut, France 123456</li>
+                      <li><i class="far fa-envelope"></i> A&A_Hotels@gmail.com</li>
+                      <li><i class="far fa-phone-alt"></i> 01 23 45 67 89 10</li>
+                      <li><i class="far fa-phone-alt"></i> 01 23 45 67 89 10</li>
+                      <li><i class="far fa-comments"></i> Service clients</li>
+                       
+      
+                  </ul>
+              </address>
+          </div>
+      </div>
+  </footer>
+  <!--fin FOOTER-->
